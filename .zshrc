@@ -195,7 +195,7 @@ alias shred='shred -uz'
 has_virtualenv() {
     if [ -e .venv ]; then
         deactivate >/dev/null 2>&1
-# source .venv/bin/activate  # commented out by conda initialize
+	source .venv/bin/activate  # commented out by conda initialize
     fi
 }
 
