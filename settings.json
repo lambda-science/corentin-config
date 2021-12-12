@@ -1,10 +1,8 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
@@ -19,8 +17,7 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -32,29 +29,19 @@
     "copyOnSelect": true,
     "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
     "disableAnimations": true,
-    "profiles": 
-    {
-        "defaults": 
-        {
+    "profiles": {
+        "defaults": {
+            "acrylicOpacity": 0.5,
             "bellStyle": "none",
-            "colorScheme": "flat-ui-v1",
-            "font": 
-            {
-                "face": "Roboto Mono",
+            "colorScheme": "Themer Dark",
+            "font": {
+                "face": "Fira Code",
                 "size": 11
             },
-            "useAcrylic": false
         },
-        "list": 
-        [
+        "list": [
             {
-                "acrylicOpacity": 0.5,
-                "colorScheme": "flat-ui-v1",
-                "font": 
-                {
-                    "face": "Roboto Mono",
-                    "size": 11
-                },
+
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "Ubuntu",
@@ -64,12 +51,14 @@
                 "startingDirectory": "//wsl$/Ubuntu/home/corentin/"
             },
             {
+
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
+
                 "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
@@ -77,8 +66,7 @@
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -101,6 +89,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "name": "Themer Dark",
+            "background": "#1a1a1a",
+            "foreground": "#e0dce0",
+            "cursorColor": "#c792ea",
+            "selectionBackground": "#82aadb",
+            "black": "#353535",
+            "brightBlack": "#4a4a4a",
+            "red": "#f07178",
+            "brightRed": "#F38D93",
+            "green": "#c3e88d",
+            "brightGreen": "#CFECA4",
+            "yellow": "#ffcb6b",
+            "brightYellow": "#FFD589",
+            "blue": "#82aadb",
+            "brightBlue": "#9BBAE2",
+            "purple": "#c792ea",
+            "brightPurple": "#D2A7EE",
+            "cyan": "#89ddff",
+            "brightCyan": "#A1E3FF",
+            "white": "#e0dce0",
+            "brightWhite": "#fffcff"
         },
         {
             "background": "#012456",
