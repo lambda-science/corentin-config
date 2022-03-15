@@ -40,7 +40,7 @@
             "colorScheme": "flat-ui-v1",
             "font": 
             {
-                "face": "Roboto Mono",
+                "face": "RFiraCode NF",
                 "size": 11
             },
             "useAcrylic": false
@@ -52,7 +52,7 @@
                 "colorScheme": "flat-ui-v1",
                 "font": 
                 {
-                    "face": "Roboto Mono",
+                    "face": "FiraCode NF",
                     "size": 11
                 },
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
@@ -61,7 +61,7 @@
                 "padding": "20, 10, 10, 10",
                 "snapOnInput": true,
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Ubuntu/home/corentin/"
+                "startingDirectory": "/home/corentin/"
             },
             {
                 "commandline": "powershell.exe",
