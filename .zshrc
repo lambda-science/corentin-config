@@ -85,11 +85,6 @@ plugins=(
     colored-man-pages)
 ZSH_DISABLE_COMPFIX="true"
 
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval `ssh-agent -s`
-  ssh-add
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 
@@ -198,19 +193,6 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias shred='shred -uz'
 
-# Auto activate venv
-has_virtualenv() {
-    if [ -e .venv ]; then
-        deactivate >/dev/null 2>&1
-# source .venv/bin/activate  # commented out by conda initialize  # commented out by conda initialize
-    fi
-}
-
-venv_cd () {
-    cd "$@" && has_virtualenv
-}
-
-alias cd="venv_cd"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
