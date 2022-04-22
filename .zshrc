@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/meyer/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,16 +79,13 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    ssh-agent
+#    ssh-agent
     dotenv
     docker
     colorize
     colored-man-pages)
-ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
-
-
 
 # User configuration
 
@@ -115,34 +112,31 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# ADDED BY CORENTIN - CUSTOMS 
-# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-# DISPLAY=:0.0
-# export DISPLAY
 LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=01;36;40" && export LS_COLORS
 
 function killbill {
-	BAK=$IFS
-	IFS=$'\n'
-	for id in $(ps aux | grep -P -i $1 | grep -v "grep" | awk '{printf $2" "; for (i=11; i<NF; i++) printf $i" "; print $NF}'); do 
-		service=$(echo $id | cut -d " " -f 1)
-		if [[ $2 == "-t" ]]; then
+        BAK=$IFS
+        IFS=$'\n'
+        for id in $(ps aux | grep -P -i $1 | grep -v "grep" | awk '{printf $2" "; for (i=11; i<NF; i++) printf $i" "; print $NF}'); do
+                service=$(echo $id | cut -d " " -f 1)
+                if [[ $2 == "-t" ]]; then
             echo $service \"$(echo $id | cut -d " " -f 2-)\" "would be killed"
-		else
+                else
             echo $service \"$(echo $id | cut -d " " -f 2-)\" "killed"
-			for signal in "TERM" "INT" "HUP" "KILL" "9"; do
-    			kill -$signal $service
-    			RETVAL=$?
-    			[ $RETVAL -eq 0 ] && break
-    			echo "warning: kill failed: pid=$service, signal=$signal" >&2
-    			sleep 1
-    		done
-		fi
-	done
-	IFS=$BAK
+                        for signal in "TERM" "INT" "HUP" "KILL" "9"; do
+                        kill -$signal $service
+                        RETVAL=$?
+                        [ $RETVAL -eq 0 ] && break
+                        echo "warning: kill failed: pid=$service, signal=$signal" >&2
+                        sleep 1
+                done
+                fi
+        done
+        IFS=$BAK
 }
 
+# ça date de http://sametmax.com/decompresser-sous-linux-en-ligne-de-commande/
+# et quelques alias pour des tâches de tous les jours
 extract () {
     if [ -f $1 ]
     then
@@ -168,11 +162,7 @@ extract () {
         exit 0
     fi
 }
- 
-# ça date de http://sametmax.com/decompresser-sous-linux-en-ligne-de-commande/
- 
-# et quelques alias pour des tâches de tous les jours
- 
+
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -194,13 +184,12 @@ alias mv='mv -i'
 alias rm='rm -I'
 alias shred='shred -uz'
 
+export FLASK_ENV=development
+export ss="/gstock/user/meyer/"
+export LLVM_CONFIG=/usr/bin/llvm-config-10
+
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /usr/local/Modules/init/zsh
-
-export FLASK_ENV=development
-export ss="/gstock/user/meyer/"
-export LLVM_CONFIG=/usr/bin/llvm-config-10
