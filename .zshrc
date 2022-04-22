@@ -183,6 +183,7 @@ alias serve="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias mv='mv -i'
 alias rm='rm -I'
 alias shred='shred -uz'
+alias ssa='eval `ssh-agent` && ssh-add'
 
 export FLASK_ENV=development
 export ss="/gstock/user/meyer/"
