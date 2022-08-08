@@ -1,8 +1,11 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions": 
+    [
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -17,7 +20,8 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -29,17 +33,21 @@
     "copyOnSelect": true,
     "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
     "disableAnimations": true,
-    "profiles": {
-        "defaults": {
-            "acrylicOpacity": 0.5,
+    "profiles": 
+    {
+        "defaults": 
+        {
             "bellStyle": "none",
             "colorScheme": "Themer Dark",
-            "font": {
+            "font": 
+            {
                 "face": "FiraCode NF",
                 "size": 11
             },
+            "opacity": 100
         },
-        "list": [
+        "list": 
+        [
             {
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
@@ -50,22 +58,25 @@
                 "startingDirectory": "/home/corentin/"
             },
             {
-
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Invite de commandes"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -88,29 +99,6 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
-        },
-        {
-            "name": "Themer Dark",
-            "background": "#1a1a1a",
-            "foreground": "#e0dce0",
-            "cursorColor": "#c792ea",
-            "selectionBackground": "#82aadb",
-            "black": "#353535",
-            "brightBlack": "#4a4a4a",
-            "red": "#f07178",
-            "brightRed": "#F38D93",
-            "green": "#c3e88d",
-            "brightGreen": "#CFECA4",
-            "yellow": "#ffcb6b",
-            "brightYellow": "#FFD589",
-            "blue": "#82aadb",
-            "brightBlue": "#9BBAE2",
-            "purple": "#c792ea",
-            "brightPurple": "#D2A7EE",
-            "cyan": "#89ddff",
-            "brightCyan": "#A1E3FF",
-            "white": "#e0dce0",
-            "brightWhite": "#fffcff"
         },
         {
             "background": "#012456",
@@ -272,6 +260,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#1A1A1A",
+            "black": "#353535",
+            "blue": "#82AADB",
+            "brightBlack": "#4A4A4A",
+            "brightBlue": "#9BBAE2",
+            "brightCyan": "#A1E3FF",
+            "brightGreen": "#CFECA4",
+            "brightPurple": "#D2A7EE",
+            "brightRed": "#F38D93",
+            "brightWhite": "#FFFCFF",
+            "brightYellow": "#FFD589",
+            "cursorColor": "#C792EA",
+            "cyan": "#89DDFF",
+            "foreground": "#E0DCE0",
+            "green": "#C3E88D",
+            "name": "Themer Dark",
+            "purple": "#C792EA",
+            "red": "#F07178",
+            "selectionBackground": "#82AADB",
+            "white": "#E0DCE0",
+            "yellow": "#FFCB6B"
         },
         {
             "background": "#000000",
